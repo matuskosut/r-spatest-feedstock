@@ -13,8 +13,9 @@ source:
   sha256: 3ead98ce9aefc1f4f69dab70e2e0331de618f78bddabd7361d94f402e4aa085f
 
 build:
+  noarch: generic
   merge_build_host: True  # [win]
-  number: 0
+  number: 1000
   rpaths:
     - lib/R/lib/
     - lib/
@@ -39,8 +40,7 @@ about:
     Also prepares summary statistics for meta-analysis and performs meta-analysis to
     combine multiple association results.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
