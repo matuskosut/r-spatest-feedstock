@@ -1,4 +1,4 @@
-{% set version = "3.0.2" %}
+{% set version = '3.0.2' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -13,9 +13,9 @@ source:
   sha256: 7a5e02f636df4c299d3a2d36033f26492b6db51f04a5cd1c2ff17e7ec1a4e831
 
 build:
-  noarch: generic
   merge_build_host: True  # [win]
   number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -34,21 +34,31 @@ test:
     - "\"%R%\" -e \"library('SPAtest')\""  # [win]
 
 about:
-  home: https://github.com/leeshawn/SPAtest
-  license: GPL (>= 2)
+  home: https://CRAN.R-project.org/package=SPAtest
+  license: GPL-2
   summary: Performs score test using saddlepoint approximation to estimate the null distribution.
     Also prepares summary statistics for meta-analysis and performs meta-analysis to
-    combine multiple association results.
-  license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    combine multiple association results. For the latest version, please check <https://github.com/leeshawn/SPAtest>.
+  license_family: GPL2
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
     - endrebak
+
+# Package: SPAtest
+# Type: Package
+# Title: Score Test and Meta-Analysis Based on Saddlepoint Approximation
+# Version: 3.0.2
+# Date: 2020-01-09
+# Author: Rounak Dey, Seunggeun Lee
+# Maintainer: Rounak Dey <deyrnk@umich.edu>
+# Description: Performs score test using saddlepoint approximation to estimate the null distribution. Also prepares summary statistics for meta-analysis and performs meta-analysis to combine multiple association results. For the latest version, please check <https://github.com/leeshawn/SPAtest>.
+# Depends: R (>= 3.0.0)
+# License: GPL (>= 2)
+# Repository: CRAN
+# NeedsCompilation: no
+# Packaged: 2020-01-10 05:03:21 UTC; Rounak
+# Date/Publication: 2020-01-10 13:50:03 UTC
