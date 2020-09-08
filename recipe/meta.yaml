@@ -1,4 +1,4 @@
-{% set version = '3.1.2' %}
+{% set version = "3.1.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/SPAtest_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/SPAtest/SPAtest_{{ version }}.tar.gz
-  sha256: 7a5e02f636df4c299d3a2d36033f26492b6db51f04a5cd1c2ff17e7ec1a4e831
+  sha256: b3d74ed2b0a6475a9966dd50eb5d363d0b2985636271dfbf82f0472b8d22b9f4
 
 build:
-  merge_build_host: True  # [win]
-  number: 0
+  merge_build_host: true  # [win]
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -36,12 +36,10 @@ test:
 about:
   home: https://CRAN.R-project.org/package=SPAtest
   license: GPL-2
-  summary: Performs score test using saddlepoint approximation to estimate the null distribution.
-    Also prepares summary statistics for meta-analysis and performs meta-analysis to
-    combine multiple association results. For the latest version, please check <https://github.com/leeshawn/SPAtest>.
+  summary: Performs score test using saddlepoint approximation to estimate the null distribution. Also prepares summary statistics for meta-analysis and performs meta-analysis to combine multiple association results. For the latest version, please check <https://github.com/leeshawn/SPAtest>.
   license_family: GPL2
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
@@ -51,7 +49,7 @@ extra:
 # Package: SPAtest
 # Type: Package
 # Title: Score Test and Meta-Analysis Based on Saddlepoint Approximation
-# Version: 3.0.2
+# Version: 3.1.2
 # Date: 2020-01-09
 # Author: Rounak Dey, Seunggeun Lee
 # Maintainer: Rounak Dey <deyrnk@umich.edu>
