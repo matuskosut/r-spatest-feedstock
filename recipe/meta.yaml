@@ -35,7 +35,7 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=SPAtest
-  license: GPL-2
+  license: GPL-2.0-or-later
   summary: Performs score test using saddlepoint approximation to estimate the null distribution. Also prepares summary statistics for meta-analysis and performs meta-analysis to combine multiple association results. For the latest version, please check <https://github.com/leeshawn/SPAtest>.
   license_family: GPL2
   license_file:
