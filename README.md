@@ -3,13 +3,11 @@ About r-spatest
 
 Home: https://CRAN.R-project.org/package=SPAtest
 
-Package license: GPL-2
+Package license: GPL-2.0-or-later
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-spatest-feedstock/blob/master/LICENSE.txt)
 
 Summary: Performs score test using saddlepoint approximation to estimate the null distribution. Also prepares summary statistics for meta-analysis and performs meta-analysis to combine multiple association results. For the latest version, please check <https://github.com/leeshawn/SPAtest>.
-
-
 
 Current build status
 ====================
